@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import "./style/FormStyle.css"
 function FormControl() {
   // const [user, setUser] = useState([])
   // const handleUser =()=>{
@@ -58,8 +58,13 @@ function FormControl() {
 
   
   return (
-    <div className='container' >
+    <>
+      <div className="first-head">
       <h1>Form for AD-MY-BRAND</h1>
+      </div>
+   
+    <div className='container' >
+      
       <form action="">
         <select name="" id="" onClick={apiGet} >
         <option value="" >select user</option>
@@ -69,20 +74,21 @@ function FormControl() {
         </select>
        <div className="title">
         <span>Title</span><br />
-        <input  type="text" name='title' placeholder='Enter the title' onChange={handleChange} />
+        <input  className='placeholder' type="text" name='title' placeholder='Enter the title' onChange={handleChange} />
        </div>
        <div>
-       <span>userId</span><br />
-       <input type="number" name="userId" placeholder="userId" onChange={handleChange} />
+       <span className = "title" >userId</span><br />
+       <input  className='placeholder' type="number" name="userId" placeholder="userId" onChange={handleChange} />
        </div>
-       <span>Body</span>
+       <span className='title' >Body</span>
         <div className="body">
-          <textarea name="body" id="" cols="30" rows="10"></textarea>
+          <textarea className='placeholder' name="body" id="" cols="80" rows="5" placeholder='body' ></textarea>
         </div>
-        <button onClick={handleSubmit} >Submit</button>
+        <button className='submit' onClick={handleSubmit} >Submit</button>
       </form>
     
     </div>
+    </>
   )
 }
 
